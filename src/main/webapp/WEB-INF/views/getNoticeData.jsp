@@ -3,6 +3,7 @@
 <%
     String title = CmmUtil.nvl(request.getParameter("title"));
     String contents = CmmUtil.nvl(request.getParameter("contents"));
+    String reg_id = CmmUtil.nvl(request.getParameter("reg_id"));
 %>
 <!DOCTYPE html>
 <html>
@@ -21,6 +22,10 @@
 <div class="form-group">
     <label>java로 부터 받은 게시판 제목</label>
     <input name="title" type="text" class="form-control" value = "<%=title%>"/>
+</div>
+<div class = "form-group">
+    <label>java로 부터 받은 작성자 이름</label>
+    <input name="reg_id" type ="text" class="form-control" value="<%=reg_id%>"/>
 </div>
 <div class="form-group">
     <label>java로 부터 받은 게시판 내용</label>
