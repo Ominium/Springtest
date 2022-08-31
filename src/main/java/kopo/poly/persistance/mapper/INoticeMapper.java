@@ -10,4 +10,10 @@ public interface INoticeMapper {
     int InsertNoticeInfo(NoticeDTO pDTO) throws Exception;
 
     List<NoticeDTO> getNoticeList() throws Exception;
+
+    NoticeDTO getNoticeDetail(NoticeDTO pDTO) throws Exception;
+
+    int NoticeDelete(NoticeDTO nDTO) throws Exception;
+
+    int NoticeChange(NoticeDTO cDTO) throws Exception;
 }

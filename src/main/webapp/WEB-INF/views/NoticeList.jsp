@@ -20,16 +20,19 @@
             <td>게시자</td>
             <td>등록일</td>
         </tr>
-        <% for(int i=0; i<rList.size();i++) {%>
+        <% for(int i=0; i<rList.size();i++) { %>
         <tr>
             <td><%=rList.get(i).getNotice_seq() %></td>
-            <td><%=rList.get(i).getTitle() %></td>
-            <td><%=rList.get(i).getReg_id() %></td>
+            <td><a href ="NoticeDetail?no=<%=rList.get(i).getNotice_seq()%>"><%=rList.get(i).getTitle()%></a></td>
             <td><%=rList.get(i).getContents() %></td>
-        }%>
+            <td><%=rList.get(i).getReg_id() %></td>
+
         </tr>
+        <%}%>
     </table>
+    <div style="width: 100%; text-align: right; margin-top: 5px">
+        <button type="button" onclick="location.href ='noticeInfo'">새글</button>
+    </div>
 </div>
 </body>
 </html>
-    
